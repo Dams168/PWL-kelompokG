@@ -26,7 +26,7 @@
         <div class="col-md-4">
             <div class="card bg-warning">
                 <div class="card-body">
-                    <h5 class="card-title text-white ">Total Pendapatan</h5>
+                    <h5 class="card-title text-white ">Email</h5>
                     <p class="card-text text-white">Koko@gmail.com</p>
                 </div>
             </div>
