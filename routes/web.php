@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PemasukannController;
+use App\Http\Controllers\PengeluaranController;
+use App\Http\Controllers\LaporanController;
+use App\Http\Controllers\PenggunaController;
+use App\Http\Controllers\DashboardController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +19,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/pemasukan', [PemasukannController::class, 'index'])->name('pemasukan.Data-Pemasukan');
+Route::get('/pengeluaran', [PengeluaranController::class, 'index'])->name('pengeluaran.Data-Pengeluaran');
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.Data-Laporan');
+Route::get('/pengguna', [PenggunaController::class, 'index'])->name('pengguna.Data-Pengguna');
+Route::get('/', function () {return view('dashboard.home');});
