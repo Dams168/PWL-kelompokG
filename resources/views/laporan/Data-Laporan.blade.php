@@ -1,31 +1,33 @@
 @extends('master')
 @section('title','Data Laporan')
 @section('container')
-<div class="container">
-    <div class="my-4 col-12">
-    <h1 class="float-left">Data Laporan</h1>
-    </div>
-    <table class="table text-center">
-     <thead>
-            <th>No</th>
-            <th>Kode Laporan</th>
-            <th>Tanggal</th>
-            <th>Kode Pemasukan</th>
-            <th>Kode Pengeluaran</th>
-            <th>Total</th>
+<div class="container mx-auto">
+    <div class="overflow-hidden my-4">
+    <table class="w-11/12 table-fixed border-collapse text-center mx-auto ">
+        <thead class="bg-blue-400">
+            <tr>
+                <th class="w-1/12 px-4 py-2">No</th>
+                <th class="w-2/12 px-4 py-2">Kode Laporan</th>
+                <th class="w-1/4 px-4 py-2">Tanggal</th>
+                <th class="w-2/12 px-4 py-2">Kode Pemasukan</th>
+                <th class="w-2/12 px-4 py-2">Kode Pengeluaran</th>
+                <th class="w-2/12 px-4 py-2">Total</th>
+            </tr>
         </thead>
         <tbody>
             @foreach ($laporan as $key => $lpr)
-            <tr>
-                <td>{{ $key + 1 }}</td>
-                <td>{{ $lpr['kode_laporan'] }}</td>
-                <td>{{ $lpr['tanggal'] }}</td>
-                <td>{{ $lpr['kode_pemasukan'] }}</td>
-                <td>{{ $lpr['kode_pengeluaran'] }}</td>
-                <td>{{ $lpr['total'] }}</td>
+            <tr class="border-b border-gray-300">
+                <td class="px-4 py-2">{{ $key + 1 }}</td>
+                <td class="px-4 py-2">{{ $lpr['kode_laporan'] }}</td>
+                <td class="px-4 py-2">{{ $lpr['tanggal'] }}</td>
+                <td class="px-4 py-2">{{ $lpr['kode_pemasukan'] }}</td>
+                <td class="px-4 py-2">{{ $lpr['kode_pengeluaran'] }}</td>
+                <td class="px-4 py-2">{{ $lpr['total'] }}</td>
             </tr>
             @endforeach
         </tbody>
-    </table>
+        </table>
+    </div>
 </div>
+
 @endsection
